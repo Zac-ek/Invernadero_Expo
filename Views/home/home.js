@@ -1,23 +1,17 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
+import { useNavigation } from "@react-navigation/native";
+import CustomNavbar from "../../components/CustomNavbar"; 
 
 const Home = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Image source={require("../../img/bay.png")} style={styles.img2} />
       <Image source={require("../../img/bay.png")} style={styles.img3} />
-      {/* Navigation Bar */}
-      <View style={styles.navbar}>
-        <TouchableOpacity style={styles.navButton}>
-          <Icon name="menu-outline" size={28} color="#000" />
-        </TouchableOpacity>
-        <Text style={styles.navTitle}>Invernadero</Text>
-        <TouchableOpacity style={styles.navButton}>
-          <Icon name="person" size={28} color="#000" />
-        </TouchableOpacity>
-      </View>
-      {/* Welcome Section */}
+      <CustomNavbar navigation={navigation} title="Invernadero" />
       <View style={styles.welcomeSection}>
         <Text style={styles.welcomeText}>¡Bienvenido a tu Invernadero!</Text>
         <Text style={styles.subText}>
