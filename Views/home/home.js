@@ -1,32 +1,57 @@
 import React from "react";
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
 
 const Home = () => {
   return (
     <View style={styles.container}>
+      <Image source={require("../../img/bay.png")} style={styles.img2} />
+      <Image source={require("../../img/bay.png")} style={styles.img3} />
       {/* Navigation Bar */}
       <View style={styles.navbar}>
         <TouchableOpacity style={styles.navButton}>
-          <Text style={styles.navButtonText}>Navigation</Text>
+          <Icon name="menu-outline" size={28} color="#000" />
         </TouchableOpacity>
+        <Text style={styles.navTitle}>Invernadero</Text>
         <TouchableOpacity style={styles.navButton}>
-          <Text style={styles.navButtonText}>User</Text>
+          <Icon name="person" size={28} color="#000" />
         </TouchableOpacity>
       </View>
-
+      {/* Welcome Section */}
+      <View style={styles.welcomeSection}>
+        <Text style={styles.welcomeText}>¡Bienvenido a tu Invernadero!</Text>
+        <Text style={styles.subText}>
+          Explora y gestiona tus recursos fácilmente
+        </Text>
+      </View>
       {/* Cards */}
       <View style={styles.cardContainer}>
         <View style={styles.card}>
-          <Text style={styles.cardTitle}>Card 1</Text>
-          <Text style={styles.cardContent}>This is the content of card 1.</Text>
+          <View style={styles.cardHeader}>
+            <Text style={styles.cardTitle}>Estado de los Invernaderos</Text>
+            <Image
+              style={styles.cardImage}
+              source={require("../../img/invernadero.png")}
+            />
+          </View>
         </View>
         <View style={styles.card}>
-          <Text style={styles.cardTitle}>Card 2</Text>
-          <Text style={styles.cardContent}>This is the content of card 2.</Text>
+          <View style={styles.cardHeader}>
+            <Text style={styles.cardTitle}>Registro de los Invernaderos</Text>
+            <Image
+              style={styles.cardImage}
+              source={require("../../img/documentacion.png")}
+            />
+          </View>
         </View>
         <View style={styles.card}>
-          <Text style={styles.cardTitle}>Card 3</Text>
-          <Text style={styles.cardContent}>This is the content of card 3.</Text>
+          <View style={styles.cardHeader}>
+            <Text style={styles.cardTitle}>Sistemas de los Invernaderos</Text>
+            <Image
+              style={styles.cardImage}
+              source={require("../../img/sistema_Invernadero.png")}
+            />
+          </View>
         </View>
       </View>
     </View>
@@ -36,46 +61,87 @@ const Home = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#f8f9fa",
+    backgroundColor: "#EDF2DF",
   },
   navbar: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: "#007bff",
+    backgroundColor: "#fff",
     paddingVertical: 15,
     paddingHorizontal: 20,
+    borderBottomLeftRadius: 15,
+    borderBottomRightRadius: 15,
+    marginTop: 32,
+  },
+  navTitle: {
+    fontSize: 20,
+    color: "#fff",
+    fontWeight: "bold",
+  },
+  img2: {
+    position: "absolute",
+    top: 200,
+    right: 0,
+    width: 150,
+    height: 150,
+  },
+  img3: {
+    position: "absolute",
+    left: 0,
+    top: 570,
+    width: 150,
+    height: 150,
+    transform: [{ rotate: "180deg" }],
   },
   navButton: {
     padding: 10,
   },
-  navButtonText: {
-    color: "#ffffff",
-    fontSize: 16,
+  welcomeSection: {
+    padding: 20,
+    alignItems: "center",
+    borderBottomLeftRadius: 30,
+    borderBottomRightRadius: 30,
+  },
+  welcomeText: {
+    fontSize: 22,
     fontWeight: "bold",
+    color: "#333",
+    textAlign: "center",
+    marginBottom: 5,
+  },
+  subText: {
+    fontSize: 14,
+    color: "#555",
+    textAlign: "center",
   },
   cardContainer: {
     padding: 20,
   },
   card: {
-    backgroundColor: "#ffffff",
-    borderRadius: 10,
-    padding: 15,
+    backgroundColor: "#D5EEB3",
+    borderRadius: 15,
+    padding: 20,
     marginBottom: 15,
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 2,
+    shadowRadius: 6,
+    elevation: 5,
+  },
+  cardHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   cardTitle: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: "bold",
-    marginBottom: 10,
+    color: "#333",
   },
-  cardContent: {
-    fontSize: 14,
-    color: "#6c757d",
+  cardImage: {
+    width: 60,
+    height: 60,
   },
 });
 
