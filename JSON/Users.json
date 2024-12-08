@@ -1,0 +1,29 @@
+{
+    "Users": [
+        {
+            "User": "Zacek",
+            "Pass": "12345678"
+        },{
+            "User": "a.zacek.gc@gmail.com",
+            "Pass": "12345678"
+        },{
+            "User": "Raul",
+            "Pass": "12345678"
+        },{
+            "User": "raulrb@gmail.com",
+            "Pass": "12345678"
+        },{
+            "User": "Edgar",
+            "Pass": "12345678"
+        },{
+            "User": "edgarcs@gmail.com",
+            "Pass": "12345678"
+        },{
+            "User": "Caro",
+            "Pass": "12345678"
+        },{
+            "User": "carolinaar@gmail.com",
+            "Pass": "12345678"
+        }
+    ]
+}

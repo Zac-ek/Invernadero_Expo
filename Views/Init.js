@@ -18,12 +18,12 @@ export default function Init({ navigation }) {
       />
       <TouchableOpacity
         style={styles.customButton}
-        onPress={() => navigation.navigate('Home')}
+        onPress={() => navigation.navigate('Login')}
       >
         <Text style={styles.buttonText}>Iniciar Sesión</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => navigation.navigate('Login')}
+        onPress={() => navigation.navigate('Register')}
         style={styles.Btn}
       >
         <Text style={styles.Rtext}>Registrarse</Text>
@@ -42,29 +42,29 @@ const styles = StyleSheet.create({
   },
   img: {
     position: 'absolute',
-    top: 220,
-    width: 150,
-    height: 150,
+    top: 270,
+    width: 200,
+    height: 200,
     borderRadius: 100,
   },
   img2: {
     position: 'absolute', 
     top: 70,
-    right: 0,
-    width: 150,
-    height: 150,
+    right: -3,
+    width: 200,
+    height: 200,
   },
   img3: {
     position: 'absolute',       
-    left: 0,
-    top: 370,      
-    width: 150,
-    height: 150, 
+    left: -3,
+    top: 470,      
+    width: 200,
+    height: 200, 
     transform: [{ rotate: '180deg' }],
   },
   customButton: {
     position: 'absolute',
-    top: 550,
+    top: 750,
     backgroundColor: '#4C6B41',
     paddingVertical: 12,
     paddingHorizontal: 20,
@@ -84,6 +84,6 @@ const styles = StyleSheet.create({
   },
   Btn: {
     position: 'absolute',
-    top: 700,
+    top: 900,
   }
 });

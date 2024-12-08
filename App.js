@@ -6,6 +6,7 @@ import Init from "./Views/Init";
 import Home from "./Views/home/home";
 import Profile from "./Views/Profile";
 import Login from "./Views/Login";
+import Register from "./Views/Register";
 import GreenhouseRegister from "./Views/home/GreenhouseRegister";
 import GreenhouseStatus from "./Views/home/GreenhouseStatus";
 import GreenhouseSystems from "./Views/home/GreenhouseSystems";
@@ -20,6 +21,7 @@ function MainStack() {
       <Stack.Screen name="Init" component={Init} />
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Register" component={Register} />
       <Stack.Screen
         name="GreenhouseStatusScreen"
         component={GreenhouseStatus}
