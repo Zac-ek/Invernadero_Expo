@@ -22,6 +22,12 @@ export default function Init({ navigation }) {
       >
         <Text style={styles.buttonText}>Iniciar Sesión</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('Login')}
+        style={styles.Btn}
+      >
+        <Text style={styles.Rtext}>Registrarse</Text>
+      </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
   );
@@ -70,4 +76,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  Rtext: {
+    color: '#000000',
+    fontSize: 16,
+    fontWeight: 'bold',
+    textDecorationLine: 'underline'
+  },
+  Btn: {
+    position: 'absolute',
+    top: 700,
+  }
 });

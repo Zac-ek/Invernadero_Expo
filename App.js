@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Init from "./Views/Init";
 import Home from "./Views/home/home";
 import Profile from "./Views/Profile";
+import Login from "./Views/Login";
 
 const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
@@ -14,6 +15,7 @@ function MainStack() {
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="Init" component={Init} />
       <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="Login" component={Login} />
     </Stack.Navigator>
   );
 }
